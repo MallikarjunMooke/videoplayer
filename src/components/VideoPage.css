@@ -1,0 +1,56 @@
+/* VideoPage.css */
+.video-page {
+  position: relative;
+}
+
+.thumbnail-circles {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  /* Ensure thumbnails are above the video player */
+}
+
+.video-page:hover .thumbnail-circles {
+  opacity: 1;
+}
+
+.thumbnail-circle {
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.3s;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 80px;
+  margin-left: 50px;
+}
+
+.thumbnail-circle img {
+  width: 30px;
+  /* Adjust the width as needed */
+  height: 30px;
+  /* Adjust the height as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.thumbnail-circle:hover img {
+  transform: scale(1.2);
+}
+
+/* Adjust the background images dynamically */
+.thumbnail-circle:nth-child(1) img {
+  background-image: url('https://www.example.com/thumbnail1.jpg');
+}
+
+.thumbnail-circle:nth-child(2) img {
+  background-image: url('https://www.example.com/thumbnail2.jpg');
+}
+
+/* Repeat for other thumbnails */
